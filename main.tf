@@ -8,4 +8,3 @@ resource "oci_core_vcn" "generated_oci_core_vcn" {
 	is_ipv6enabled = "false"
 }
 
-
