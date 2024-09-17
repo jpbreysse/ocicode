@@ -1,6 +1,7 @@
 variable "compartment_ocid" {
   description = "The OCID of the compartment where the resources will be created."
   type        = string
+  default     = "ocid1.compartment.oc1..aaaaaaaao7hj3a6vn2qmis6g6iifqs2givwb2376mo2cfabtrobj63agrplq"
 }
 
 variable "vcn_name" {
