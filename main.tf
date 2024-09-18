@@ -11,6 +11,7 @@ module "internal" {
 	compartment_id = var.compartment_id
 }
 
+
 module "generated_oci_core_instance" {
 	source = "./modules/instance"
 }

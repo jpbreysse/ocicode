@@ -1,74 +1,11 @@
 resource "oci_core_instance" "generated_oci_core_instance" {
-	agent_config {
-		is_management_disabled = "false"
-		is_monitoring_disabled = "false"
-		plugins_config {
-			desired_state = "DISABLED"
-			name = "Vulnerability Scanning"
-		}
-		plugins_config {
-			desired_state = "DISABLED"
-			name = "Oracle Java Management Service"
-		}
-		plugins_config {
-			desired_state = "DISABLED"
-			name = "OS Management Service Agent"
-		}
-		plugins_config {
-			desired_state = "DISABLED"
-			name = "OS Management Hub Agent"
-		}
-		plugins_config {
-			desired_state = "DISABLED"
-			name = "Management Agent"
-		}
-		plugins_config {
-			desired_state = "ENABLED"
-			name = "Custom Logs Monitoring"
-		}
-		plugins_config {
-			desired_state = "DISABLED"
-			name = "Compute RDMA GPU Monitoring"
-		}
-		plugins_config {
-			desired_state = "ENABLED"
-			name = "Compute Instance Run Command"
-		}
-		plugins_config {
-			desired_state = "ENABLED"
-			name = "Compute Instance Monitoring"
-		}
-		plugins_config {
-			desired_state = "DISABLED"
-			name = "Compute HPC RDMA Auto-Configuration"
-		}
-		plugins_config {
-			desired_state = "DISABLED"
-			name = "Compute HPC RDMA Authentication"
-		}
-		plugins_config {
-			desired_state = "ENABLED"
-			name = "Cloud Guard Workload Protection"
-		}
-		plugins_config {
-			desired_state = "DISABLED"
-			name = "Block Volume Management"
-		}
-		plugins_config {
-			desired_state = "DISABLED"
-			name = "Bastion"
-		}
-	}
-	availability_config {
-		recovery_action = "RESTORE_INSTANCE"
-	}
-	availability_domain = "rBlv:EU-PARIS-1-AD-1"
-	compartment_id = "ocid1.compartment.oc1..aaaaaaaao7hj3a6vn2qmis6g6iifqs2givwb2376mo2cfabtrobj63agrplq"
+	
+    compartment_id = var.compartment_id
 	create_vnic_details {
 		assign_ipv6ip = "false"
 		assign_private_dns_record = "true"
 		assign_public_ip = "false"
-		subnet_id = "ocid1.subnet.oc1.eu-paris-1.aaaaaaaabvl6zp2rifujg3cso6365v7gjatvie4zanihgeezwyjauotcjfya"
+		subnet_id =  oci_core_subnet.internal.id
 	}
 	display_name = "instance-test"
 	instance_options {
