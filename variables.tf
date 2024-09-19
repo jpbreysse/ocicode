@@ -34,15 +34,15 @@ variable "region" {
   default     = "eu-paris-1"
 }
 
-variable "bucket_name"   { 
-    type = string
-    default  =  "ob-bucket2"
-    }
+variable "bucket_name" {
+  type    = string
+  default = "ob-bucket2"
+}
 
 variable "bucket_namespace" {
-     type = string 
-     default = "axmfsftqjo4u"
-     }
+  type    = string
+  default = "axmfsftqjo4u"
+}
 
 variable "bucket_access_type" {
   type    = string
@@ -50,6 +50,6 @@ variable "bucket_access_type" {
 }
 
 variable "bucket_storage_tier" {
-type = string
-default = "Archive"
+  type    = string
+  default = "Archive"
 }

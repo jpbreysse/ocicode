@@ -1,4 +1,4 @@
-variable "subnet_id" {
-  description = "The name of the VCN."
+variable "compartment_id" {
+  description = "The OCID of the compartment where the resources will be created."
   type        = string
 }
